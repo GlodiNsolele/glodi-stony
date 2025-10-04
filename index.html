@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Glodi Stony — Design & Marketing</title>
+
+  <!-- Styles & fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome (icônes) -->
+  <script src="https://kit.fontawesome.com/4b9f1a2b45.js" crossorigin="anonymous" defer></script>
+
+  <!-- Script principal -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#accueil">
+        <img src="logo 3.jpg" alt="Logo Glodi Stony" class="brand-logo">
+        <span class="brand-name">Glodi Stony</span>
+      </a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="main-nav" class="main-nav">
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="accueil" class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>Construisons ensemble ton succès digital</h1>
+        <p>Design graphique • Marketing digital • Sites web • Coaching</p>
+        <div class="hero-cta">
+          <a class="btn-primary" href="https://wa.me/243972895717" target="_blank" rel="noopener">Discutons sur WhatsApp</a>
+          <a class="btn-ghost" href="#portfolio">Voir le portfolio</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <!-- optionnel : remplacer par une image/maquette -->
+        <img src="Birthday copie.jpg" alt="Exemple de projet">
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section services">
+    <div class="container">
+      <h2>Mes Services</h2>
+      <p class="subtitle">J'aide les marques et entrepreneurs à créer une image forte et rentable.</p>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <i class="fas fa-palette service-icon" aria-hidden="true"></i>
+          <h3>Design Graphique</h3>
+          <p>Logos, identités visuelles, supports print & réseaux sociaux.</p>
+        </article>
+
+        <article class="service-card">
+          <i class="fas fa-bullhorn service-icon" aria-hidden="true"></i>
+          <h3>Marketing Digital</h3>
+          <p>Stratégies réseaux, campagnes publicitaires et community management.</p>
+        </article>
+
+        <article class="service-card">
+          <i class="fas fa-code service-icon" aria-hidden="true"></i>
+          <h3>Développement Web</h3>
+          <p>Sites vitrines responsives, landing pages et maintenance.</p>
+        </article>
+
+        <article class="service-card">
+          <i class="fas fa-user-tie service-icon" aria-hidden="true"></i>
+          <h3>Coaching & Formation</h3>
+          <p>Formations pratiques en design, marketing digital, branding, informatique de bureau et accompagnement individuel.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="section portfolio">
+    <div class="container">
+      <h2>Mon Portfolio</h2>
+      <p class="subtitle">Clique sur un projet pour l'agrandir — filtre par catégorie pour trouver rapidement.</p>
+
+      <!-- Filtres -->
+      <div class="filter-buttons" role="tablist" aria-label="Filtrer le portfolio">
+        <button class="filter-btn active" onclick="filterSelection('all', this)">Tout</button>
+        <button class="filter-btn" onclick="filterSelection('design', this)">Design</button>
+        <button class="filter-btn" onclick="filterSelection('web', this)">Web</button>
+        <button class="filter-btn" onclick="filterSelection('marketing', this)">Marketing</button>
+      </div>
+
+      <!-- Items -->
+      <div class="portfolio-container" aria-live="polite">
+        <div class="portfolio-item design">
+          <button class="portfolio-thumb" onclick="openLightbox(this.querySelector('img'))" aria-label="Ouvrir Projet Identité Visuelle">
+            <img src="Happy-jbeauty.png" alt="Identité Visuelle — projet 1">
+          </button>
+          <h3>Identité Visuelle</h3>
+          <p>Logo et charte graphique pour une marque de mode.</p>
+        </div>
+
+        <div class="portfolio-item web">
+          <button class="portfolio-thumb" onclick="openLightbox(this.querySelector('img'))" aria-label="Ouvrir Projet Site Vitrine">
+            <img src="file_00000000a47462308e41a16d6dbbfe5b.png" alt="Site Vitrine — projet 2">
+          </button>
+          <h3>Site Vitrine</h3>
+          <p>Développement d’un site responsive pour PME.</p>
+        </div>
+
+        <div class="portfolio-item marketing">
+          <button class="portfolio-thumb" onclick="openLightbox(this.querySelector('img'))" aria-label="Ouvrir Projet Campagne Digitale">
+            <img src="AUKORA_London_Streetwear_Concept_imagen.png" alt="Campagne Digitale — projet 3">
+          </button>
+          <h3>Campagne Digitale</h3>
+          <p>Campagne social & performance — augmentation du ROI.</p>
+        </div>
+
+        <div class="portfolio-item design">
+          <button class="portfolio-thumb" onclick="openLightbox(this.querySelector('img'))" aria-label="Ouvrir Projet Affiche">
+            <img src="affiche service danse 1.jpg" alt="Affiche Publicitaire — projet 4">
+          </button>
+          <h3>Affiche Publicitaire</h3>
+          <p>Design print pour événement promotionnel.</p>
+        </div>
+
+        <!-- Ajoute ici d'autres projets en dupliquant le bloc ci-dessus et en changeant la classe (design/web/marketing) -->
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" aria-hidden="true" onclick="closeLightbox(event)">
+      <button class="lightbox-close" aria-label="Fermer la vue">✕</button>
+      <img id="lightbox-img" src="" alt="Aperçu du projet">
+      <p id="lightbox-caption" class="lightbox-caption" aria-hidden="false"></p>
+    </div>
+  </section>
+
+  <!-- À propos -->
+  <section id="apropos" class="section about">
+    <div class="container">
+      <h2>À propos</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Je suis <strong>Glodi Stony</strong>, entrepreneur digital, designer créatif, conférencier et formateur privé. J’aide les entrepreneurs, marques et particuliers à transformer leurs idées en solutions concrètes grâce au design, au marketing digital et à des stratégies innovantes. Passionné par le partage de connaissances, 
+            j’accompagne et forme ceux qui veulent développer leurs compétences, bâtir leur identité et atteindre leurs objectifs avec impact et authenticité.</p>
+          <ul>
+            <li>Création des sites & Design Graphique</li>
+            <li>Marketing Digital & Réseaux sociaux</li>
+            <li>Conférence & Intervention</li>
+            <li>Formation & coaching privé</li>
+          </ul>
+          <a class="btn-primary" href="https://wa.me/243972895717" target="_blank" rel="noopener">Travailler avec moi</a>
+        </div>
+        <div class="about-image">
+          <img src="IMG-20250820-WA0106.jpg" alt="Portrait Glodi Stony">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2>Contact & Réseaux</h2>
+      <p class="subtitle">Discutons de ton projet — contacte-moi directement sur WhatsApp :</p>
+
+      <div class="contact-row">
+        <a class="whatsapp-card" href="https://wa.me/243972895717" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i>
+          <div>
+            <strong>+243 972 895 717</strong>
+            <span>WhatsApp — Collaboration & services</span>
+          </div>
+        </a>
+
+        <div class="socials">
+          <!-- Remplace les liens par tes profils réels -->
+          <a href="https://web.facebook.com/profile.php?id=61575098380732&locale=fr_FR">Facebook</a>
+          <a href="https://www.instagram.com/glodi.stony/">instagram</a>
+          <a href="https://www.tiktok.com/@glodistony?is_from_webapp=1&sender_device=pc"></i></a>
+          <a href="https://x.com/GlodiStony">Twitter (X)</a>
+          <a href="https://www.youtube.com/@glodistony">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Glodi Stony — Tous droits réservés.</p>
+    </div>
+  </footer>
+</body>
+</html>
